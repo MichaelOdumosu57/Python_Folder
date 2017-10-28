@@ -1,3 +1,4 @@
+
 learning python
 
     Python Applications
@@ -106,4 +107,60 @@ learning python
 
                     if you put a decimal ITS unix python will output the nearest decimal to 10 places
 
-                file python_list.txt
+                file python_list.py
+
+        Python Operators
+            -Arithmetic Operators
+
+                Operators	Description
+                //	Perform Floor division(gives integer value after division)
+                +	To perform addition
+                -	To perform subtraction
+                *	To perform multiplication
+                /	To perform division
+                %	To return remainder after division(Modulus)
+                **	Perform exponent(raise to power)
+
+            -Relational Operators
+                Operators	Description
+                <	Less than
+                >	Greater than
+                <=	Less than or equal to
+                >=	Greater than or equal to
+                ==	Equal to
+                !=	Not equal to
+                <>	Not equal to(similar to !=)
+
+            -Assignment Operators
+                Operators	Description
+                =	Assignment
+                /=	Divide and Assign
+                +=	Add and assign
+                -=	Subtract and Assign
+                *=	Multiply and assign
+                %=	Modulus and assign
+                **=	Exponent and assign
+                //=	Floor division and assign
+
+            -Logical Operators:
+                Operators	Description
+                and	Logical AND(When both conditions are true output will be true)
+                or	Logical OR (If any one condition is true output will be true)
+                not	Logical NOT(Compliment the condition i.e., reverse)
+
+            -Membership Operators:
+                Membership Operators:
+
+                Operators	Description
+                in	Returns true if a variable is in sequence of another variable, else false.
+                not in	Returns true if a variable is not in sequence of another variable, else false.
+
+                file : python_membership.py
+
+            -Identity Operators:
+                Operators	Description
+                is	Returns true if identity of two operands are same, else false
+                is not	Returns true if identity of two operands are not same, else false.
+        
+                file: python_identity.py
+
