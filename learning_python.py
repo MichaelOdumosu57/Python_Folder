@@ -412,3 +412,76 @@ rstrip()	Remove all trailing whitespace of a string. It can also be used to remo
                 remove(object)	It removes the object from the given List.
                 reverse()	Reverse the position of all the elements of a list.
                 sort()	It is used to sort the elements of the List.
+    -Python Tuple
+    
+    data=(10,20,'ram',56.8)
+    data2="a",10,20.9
+    data
+    (10, 20, 'ram', 56.8)
+    data2
+    ('a', 10, 20.9)
+    
+    If Parenthesis is not given with a sequence, it is by default treated as Tuple.
+    
+        -empty tuple
+            tuple1=()
+    
+        -single value tuple
+            Tuple1=(10,)
+    
+        -nested tuple
+            tupl1='a','mahesh',10.56
+            tupl2=tupl1,(10,20,30)
+            ('a', 'mahesh', 10.56)
+            (('a', 'mahesh', 10.56), (10, 20, 30))
+    
+        -Accessing Tuple
+            file: python_access_tuple.html
+      
+        -Elements in a Tuple
+            Data=(1,2,3,4,5,10,19,17)
+            Data[0]=1=Data[-8] ,
+            Data[1]=2=Data[-7] ,
+            Data[2]=3=Data[-6] ,
+            Data[3]=4=Data[-5] ,
+            Data[4]=5=Data[-4] ,
+            Data[5]=10=Data[-3],
+            Data[6]=19=Data[-2],
+            Data[7]=17=Data[-1]
+    
+        -Tuple Operations
+            
+            --Adding Tuple:Tuple can be added by using the concatenation operator(+) to join two tuples.
+            --Replicating Tuple:Replicating means repeating. It can be performed by using '*' operator by a specific number of time.
+            --Tuple slicing:A subpart of a tuple can be retrieved on the basis of index. This subpart is known as tuple slice.
+    
+        -Other Operations:
+        
+            --Updating elements in a tuple:
+                cant do that but you can make new tuples by concatenating them
+                
+            --Deleting elements from Tuple:
+                cant but delete whole tuple
+                if you do cant print again because  print data  will show an error since tuple data is already deleted
+                
+            file: python_tuple_operations.py
+        -Functions of Tuple
+            min(tuple)	Returns the minimum value from a tuple.
+            max(tuple)	Returns the maximum value from the tuple.
+            len(tuple)	Gives the length of a tuple
+            cmp(tuple1,tuple2)	Compares the two Tuples.
+            tuple(sequence)	Converts the sequence into tuple.
+            file: python_tuple_functions.py
+            
+        -Why Use Tuple?
+            Processing of Tuples are faster than Lists.
+            It makes the data safe as Tuples are immutable and hence cannot be changed.
+            Tuples are used for String formatting.
+            
+    -Python Dictionary
+        Dictionary is an unordered set of key and value pair.
+        data={100:'Ravi' ,101:'Vijay' ,102:'Rahul'}
+        print data
+        
+        -Accessing Values
+            file: python_access_dict.py
