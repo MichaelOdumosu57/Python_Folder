@@ -485,3 +485,39 @@ rstrip()	Remove all trailing whitespace of a string. It can also be used to remo
         
         -Accessing Values
             file: python_access_dict.py
+            
+        -Updation: all values can be changed
+            file : python_update_dict.py
+            
+        -Deletion:
+            syntax
+            del  [key]
+            can delete whole dict but show an error while printing
+            file : python_delete_dict.py
+            
+        -Functions and Methods
+            -functions
+            len(dictionary)	Gives number of items in a dictionary.
+            cmp(dictionary1,dictionary2)	Compares the two dictionaries.
+              If, dictionary1 == dictionary2, returns 0.
+              dictionary1 < dictionary2, returns -1.
+              dictionary1 > dictionary2, returns 1.
+
+            str(dictionary)	Gives the string representation of a string.
+            file :python_functions_dict.py
+            
+            -methods
+            keys()	Return all the keys element of a dictionary.
+            values()	Return all the values element of a dictionary.
+            items()	Return all the items(key-value pair) of a dictionary.
+            update(dictionary2)	It is used to add items of dictionary2 to first dictionary.
+            clear()	It is used to remove all items of a dictionary. It returns an empty dictionary.
+            fromkeys(sequence,value1)/ fromkeys(sequence)	It is used to create a new dictionary from the sequence where sequence elements forms the key and all keys share the values ?value1?. In case value1 is not give, it set the values of keys to be none.
+            copy()	It returns an ordered copy of the data.
+            has_key(key)	It returns a boolean value. True in case if key is present in the dictionary ,else false.
+            get(key)	Returns the value of the given key. If key is not present it returns none.
+            
+            file: python_methods_dict.py
+            
+            
+            
