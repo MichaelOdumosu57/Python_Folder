@@ -495,8 +495,8 @@ rstrip()	Remove all trailing whitespace of a string. It can also be used to remo
             can delete whole dict but show an error while printing
             file : python_delete_dict.py
             
-        -Functions and Methods
-            -functions
+        --Functions and Methods
+            ---functions
             len(dictionary)	Gives number of items in a dictionary.
             cmp(dictionary1,dictionary2)	Compares the two dictionaries.
               If, dictionary1 == dictionary2, returns 0.
@@ -506,7 +506,7 @@ rstrip()	Remove all trailing whitespace of a string. It can also be used to remo
             str(dictionary)	Gives the string representation of a string.
             file :python_functions_dict.py
             
-            -methods
+            ----methods
             keys()	Return all the keys element of a dictionary.
             values()	Return all the values element of a dictionary.
             items()	Return all the items(key-value pair) of a dictionary.
@@ -519,5 +519,72 @@ rstrip()	Remove all trailing whitespace of a string. It can also be used to remo
             
             file: python_methods_dict.py
             
+    -Python Functions
+        there are built in and user-defined functions
+        
+        -Defining a Function:
+            def [ function_name]([parameters]):
+                
+        -Invoking a Function:
+            [ function_name]([parameters]):
+                
+        file: python_define_invoke_function.py
+        
+        -return Statement:
+            return value,none or end the function
+            file: python_return_function.py
             
+        -Argument and Parameter:
+            argument is in the function call
+            parameter is in the function definition
             
+            --Passing Parameters
+                ---Positional/Required Arguments:
+                    function call statement must match the number and order of arguments
+                    def sum(a,b):
+                                "Function having two parameters"
+                             c=a+b
+                                  print c
+                      
+                    sum(10,20)
+                                
+                ---Default Arguments
+                    parameter already has value
+                    #Function Definition
+                    def msg(Id,Name,Age=21):
+                                "Printing the passed value"
+                                print Id
+                             print Name
+                             print Age
+                             return
+                    #Function call
+                    msg(Id=100,Name='Ravi',Age=20)
+                    msg(Id=101,Name='Ratan') #age here will be default 21
+                    
+                ---Keyword Arguments:
+                    if parameter and type are same order does not matter
+                    
+            --Anonymous Function:
+                Anonymous Functions are the functions that are not bond to name.
+                Anonymous Functions are created by using a keyword "lambda".
+                Lambda takes any number of arguments and returns an evaluated expression.
+                Lambda is created without using the def keyword.
+                            
+                lambda arg1,args2,args3,?,argsn :expression
+                    #Function Definiton
+                    square=lambda x1: x1*x1
+                      
+                    #Calling square as a function
+                    print "Square of number is",square(10)
+                                
+                ---the difference between normal and anomyomous is that anomyous does not need def and when calling does not need  a return in order to return
+    
+            --Scope of Variable:
+                ---local variable
+                    variable declared inside function body
+                    
+                ---global variable
+                    declared outside body
+                    
+    -Python File i/o
+    
