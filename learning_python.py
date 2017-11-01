@@ -587,4 +587,113 @@ rstrip()	Remove all trailing whitespace of a string. It can also be used to remo
                     declared outside body
                     
     -Python File i/o
+        --print statement:
+            if actual expresison
+            print "[expresison]"
+            if variable
+            print [expresison]
+            
+        --Input from Keyboard:
+            ---input(); it evaluates what you put in mathematical equation
+            input("Expression")
+            
+            ---raw_input(): it takes your input and converts it to a string
+                string is default else it has to be typecasted
+                
+                file: python_typecast_input.py
+                
+        --File Handling:
+            ---File Operations
+                ----to open  a file
+                    obj=open(filename , mode , buffer)
+                        filename: name of file as a string
+                        mode: read = r write = w (For overwrite) append = a
+                ---- to close a file
+                        obj.close()
+                        
+                ---- writing to a file
+                     obj.write(str)
+                     
+                ---- reading from a file
+                     obj.read(value)
+                        number of bytes to be read, if no value, reads to the end of the
+                        file
+                        
+                file: python_read_write_file.py
+                    
+        --Attributes of File:
+            ---Mode	Returns the mode in which file is being opened.
+r	It opens in Reading mode. It is default mode of File. Pointer is at beginning of the file.
+rb	It opens in Reading mode for binary format. It is the default mode. Pointer is at beginning of file.
+r+	Opens file for reading and writing. Pointer is at beginning of file.
+rb+	Opens file for reading and writing in binary format. Pointer is at beginning of file.
+w	Opens file in Writing mode. If file already exists, then overwrite the file else create a new file.
+wb	Opens file in Writing mode in binary format. If file already exists, then overwrite the file else create a new file.
+w+	Opens file for reading and writing. If file already exists, then overwrite the file else create a new file.
+wb+	Opens file for reading and writing in binary format. If file already exists, then overwrite the file else create a new file.
+a	Opens file in Appending mode. If file already exists, then append the data at the end of existing file, else create a new file.
+ab	Opens file in Appending mode in binary format. If file already exists, then append the data at the end of existing file, else create a new file.
+a+	Opens file in reading and appending mode. If file already exists, then append the data at the end of existing file, else create a new file.
+ab+	Opens file in reading and appending mode in binary format. If file already exists, then append the data at the end of existing file, else create a new file.
+                    
+        --Methods for file handling:
+            #There is a module "os" defined in Python that provides various functions which are used to perform various operations on Files. To use these functions 'os' needs to be imported.
+Method	Description
+rename()	It is used to rename a file. It takes two arguments, existing_file_name and new_file_name.
+    ex.
+        os.rename(existing_file_name, new_file_name)
+        
+remove()	It is used to delete a file. It takes one argument. Pass the name of the file which is to be deleted as the argument of method.
+    ex.
+        os.remove(file_name)
+mkdir()	It is used to create a directory. A directory contains the files. It takes one argument which is the name of the directory.
+    ex.
+        os.mkdir("file_name")
+chdir()	It is used to change the current working directory. It takes one argument which is the name of the directory.
+    ex.
+        os.chdir("file_name")
+getcwd()	It gives the current working directory.
+        ex.
+            os.getcwd()
+rmdir()	It is used to delete a directory. It takes one argument which is the name of the directory. but the directory must be empty first
+    ex.
+        os.rmdir("directory_name")
+tell()	It is used to get the exact position in the file.
+
+    file: python_methods_file.py
     
+
+    -Python Modules
+        good for reusability and categorization
+        --importing a modules
+            single
+            import [file_name], [file_name] ... #file name is a module here
+            
+            multiple
+            import file_name],  [file_name] ...
+            
+            --- to make one
+                place code, classes and functions in a file
+                
+            ---to use
+                [module].[functional].[exectutable_name]([parameters]...)
+                
+            ---Using from.. import statement: #when you do not need all of the
+                from [module] import [needed_action_code]
+                file: python_from_import_module.py
+                
+            ---To import whole module:
+                from [module] import *
+                
+        --Built in Modules in Python:
+            ---math module
+Function	Description
+ceil(n)	Returns the next integer number of the given number
+sqrt(n)	Returns the Square root of the given number.
+exp(n)	Returns the natural logarithm e raised to the given number
+floor(n)	Returns the previous integer number of the given number.
+log(n,baseto)	Returns the natural logarithm of the number.
+pow(baseto, exp)	Returns baseto raised to the exp power.
+sin(n)	Returns sine of the given radian.
+cos(n)	Returns cosine of the given radian.
+tan(n)	Returns tangent of the given radian.
