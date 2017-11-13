@@ -687,6 +687,8 @@ tell()	It is used to get the exact position in the file.
                 
         --Built in Modules in Python:
             ---math module
+            
+            
 Function	Description
 ceil(n)	Returns the next integer number of the given number
 sqrt(n)	Returns the Square root of the given number.
@@ -697,3 +699,51 @@ pow(baseto, exp)	Returns baseto raised to the exp power.
 sin(n)	Returns sine of the given radian.
 cos(n)	Returns cosine of the given radian.
 tan(n)	Returns tangent of the given radian.
+
+Constants	Descriptions
+Pi	Returns constant ? = 3.14159...
+ceil(n)	Returns constant e= 2.71828...
+
+            --file: python_math.py
+            ---random module
+random()	It returns a random number between 0.0 and 1.0 where 1.0 is exclusive.
+randint(x,y)	It returns a random number between x and y where both the numbers are inclusive.
+            --file :python_random.py
+            
+        --Package
+
+            A Package is simply a collection of similar modules, sub-packages etc..
+            to do
+                1) Create the directory:
+                
+                import os
+                os.mkdir("Info")
+                2) Place different modules in package: (Save different modules inside the Info package)
+                
+                msg1.py
+                
+                def msg1():
+                    print "This is msg1"
+                msg2.py
+                
+                def msg2():
+                    print "This is msg2"
+                msg3.py
+                
+                def msg3():
+                    print "This is msg3"
+                3) Create __init__.py file:
+                
+                from msg1 import msg1
+                from msg2 import msg2
+                from msg3 import msg3
+                4)Import package and use the attributes:
+                
+                import Info
+                Info.msg1()
+                Info.msg2()
+                Info.msg3()
+                
+        --directory: python_package
+        # learn how to write python to file properly, hint doesn't matter if its all string just need proper format
+        #when making calls to modules, the information in the file must be written in the file, before they are called through package reference, or Python 2.6.2 will not see them because it runs the functions in the given module before writing to them

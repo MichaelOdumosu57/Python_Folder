@@ -1,1 +1,2 @@
-def msg2(): print "This is msg2
+def message2():
+   print 'This is message2'
