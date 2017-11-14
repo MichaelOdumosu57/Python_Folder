@@ -1,6 +1,4 @@
-
-    
-learning python
+    learning python
 
     Python Applications
         can be used with web, mobile, video, embed
@@ -747,3 +745,65 @@ randint(x,y)	It returns a random number between x and y where both the numbers a
         --directory: python_package
         # learn how to write python to file properly, hint doesn't matter if its all string just need proper format
         #when making calls to modules, the information in the file must be written in the file, before they are called through package reference, or Python 2.6.2 will not see them because it runs the functions in the given module before writing to them
+        
+    -Python exception handling
+        ZeroDivisionError: Occurs when a number is divided by zero.
+        NameError: It occurs when a name is not found. It may be local or global.
+        IndentationError: If incorrect indentation is given.
+        IOError: It occurs when Input Output operation fails.
+        EOFError: It occurs when end of file is reached and yet operations are being performed
+        
+        --Exception Handling:
+            work as a switch, does certain things if malicious code occurs
+            try:
+                malicious code
+            except Exception1:
+                execute code
+            except Exception2:
+                execute code
+            ....
+            ....
+            except ExceptionN:
+                execute code
+        
+            except Exception1,Exception2,Exception3,..,ExceptionN
+                execute this code in case any Exception of these occur.
+            else:
+                In case of no exception, execute the else block code.
+            
+            once the exception is completed, python continues to the next code block in the sequence
+                
+            file: python_except_basic.py
+                  python_all_exception.py
+                  python_multiple_except.py
+                  
+        --Finally Block:
+            if user wants something executed regardless of execption results
+            try:
+                Code
+            finally:
+                code which is must to be executed.
+                
+            python_finally_except.py
+            
+        --Raise Exception
+            your own custom exception
+            ---syntax
+                raise [Exception_class]([value])
+                except [Exception_class] as [variable]
+                # variable stores the value of the exception
+            file:python_raise_exception.py
+                
+        --Custom exception class
+            user defined exception
+            class [exception class](Exception):
+                [init function]
+                
+            try:
+                raise [exception class]([arguments for __init__ ])
+            except  [exception class] as [variable]:
+                do things
+                
+            repr()
+            is used when return class values of objects, but returning it regularly seems to work just fine
+            file: python_custom_exception.py
