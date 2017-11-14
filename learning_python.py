@@ -1,4 +1,4 @@
-    learning python
+learning python
 
     Python Applications
         can be used with web, mobile, video, embed
@@ -873,8 +873,109 @@ randint(x,y)	It returns a random number between x and y where both the numbers a
                 prmonth(year,month)	            Print the given month of the given year
             
             
-
+    -Python OOPs Concepts
+    
+        --Object
+            entity that has state and behavior
+            
+        --Class
+            a collection of  methods and objects
+            
+        --method
+            function associated with an object
+            
+        --Inheritance
+            It specifies that one object acquires all the properties and behaviors of parent object
+            
+        --Polymorphism
+            one task can be done in several different ways
+            
+        --Encapsulation
+            protect methods and objects from being touched
+            
+        --Data Abstraction
+            same thing as encapsulation but given a name so that the name captures the core of what a function or a whole program does.
+            
+        --Python Class
+            syntax
+            class ClassName:
+                <statement-1>
+                "doctring, probably descibes the class"
+                def [function]()
+                [var] = [value]
+                .
+                <statement-N>
+                
+            to acess var
+                ClassName.[var]
+                
+            .__doc__
+                ClassName.__doc__
+                returns string //"doctring, probably descibes the class"
+                
+            to find location of function
+                ClassName.[function]
+                
+        --Object Class creation
+            
+            [object name] = ClassName();
+            file: python_object_class_creation.py
+            
+        --Python Constructors
+            helps initlazlie the class object with outside needed infomation
+            syntax
+                __init__().
+            python still gives the class a default constructor if you do not 'give it one'
+            file: python_object_class_creation.py
         
+    -Python Inheritance
+        here it specificies that a class (derived or child) receives all its attributes from the parent or base class
+        
+            class DerivedClassName(BaseClassName):
+                <statement-1>
+                .
+                .
+                .
+                <statement-N>
+                
+            class DerivedClassName(modulename.BaseClassName):
+                <statement-1>
+                .
+                .
+                .
+                <statement-N>
+            file: python_class_inheritance.py
+            
+        --python multi inheritance
+            file: python_multilevel_inheritance.py
+
+
+        --Multiple Inheritance in Python
+            class DerivedClassName(Base1, Base2, Base3):
+                <statement-1>
+                .
+                .
+                .
+                <statement-N>
+                
+            or
+            
+            class Base1:
+                pass
+              
+            class Base2:
+                pass
+              
+            class MultiDerived(Base1, Base2):
+                pass
+            
+            
+            --super()
+                when you have not finished completing the child so, you must re-initalize the parent in order to properly intialize the child. super connects all the classes that you wish to connect
+                
+            if you want a class to print something as soon as it is consturcted, you can place print statements int the __init__ and will print as soon as the execution reaches function call
+                    
+            file: python_multiple_inheritance.py
             
             
             
