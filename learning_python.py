@@ -807,3 +807,74 @@ randint(x,y)	It returns a random number between x and y where both the numbers a
             repr()
             is used when return class values of objects, but returning it regularly seems to work just fine
             file: python_custom_exception.py
+            
+    -Python Date and Time
+    
+        --Retrieve Time
+            import time;
+            localtime = time.localtime(time.time())
+            epoch = time.time()
+            print "Current Time is :", localtime
+            print "the epoch is:", epoch
+            #time() returns the number of seconds ever since 12:00 am , January 1,1970.
+            #local time returns an object with data containing the exact time that it is right now
+            
+            Attribute	Description
+            tm_year	Returns the current year
+            tm_mon	Returns the current month
+            tm_mday	Returns the current month day
+            tm_hour	Returns the current hour.
+            tm_min	Returns the current minute
+            tm_sec	Returns current seconds
+            tm_wday	Returns the week day
+            tm_yday	Returns the year day.
+            tm_isdst	It returns -1,0 or 1.
+            
+            file: python_retrieve_time.py
+            
+        --Formatted Time
+        
+            use time.asctime() in order to do the formatting
+            
+        --time module:
+
+            Methods	                Description
+            time()	                Returns floating point value in seconds since epoch i.e.,12:00am, January 1,                        1970
+            asctime(time)	        It takes the tuple returned by localtime() as parameter. It returns a 24                            character string.
+            sleep(time)	             The execution will be stopped for the given interval of time.
+            strptime(String,format)	It returns an tuple with 9 time attributes. It receives an String of date and a                     format, which are registed as casting
+            
+            
+            
+            %a	weekday name.
+            %b	month name
+            %c	date and time
+            %e	day of a month
+            %m	month in digit.
+            %n	new line character.
+            %S	second
+            %t	tab character
+            
+            gtime()/gtime(sec)	    It returns struct_time which contains 9 time attributes. In case seconds are not                     specified it takes current second from epoch.
+            mktime()	            Returns second in floating point since epoch.
+            strftime(format)/strftime(format,time)	Returns time in particular format. If time is not given, current                                     time in seconds is fetched.
+            
+        --Calendar
+            its own python module
+            
+            ---calendar module
+            
+                Methods	                        Description
+                prcal(year)	                    Prints the whole calendar of the year.
+                firstweekday()	                Returns the first week day. It is by default 0 which specifies                                  Monday
+                isleap(year)	                Returns a Boolean value i.e., true or false. True in case given year                             is leap else false.
+                monthcalendar(year,month)	    Returns the given month with each week as one list.
+                leapdays(year1,year2)	        Return number of leap days from year1 to year2
+                prmonth(year,month)	            Print the given month of the given year
+            
+            
+
+        
+            
+            
+            
