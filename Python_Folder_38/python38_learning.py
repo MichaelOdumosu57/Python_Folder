@@ -456,3 +456,101 @@ The built-in function len() returns the length of a string:
 >>> len(s)
 34
 
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;     
+
+
+lists 
+>>> squares = [1, 4, 9, 16, 25]
+>>> squares
+[1, 4, 9, 16, 25]
+
+you can use the [a:b] like strings with lists 
+
+
+Lists also support operations like concatenation:
+>>>
+
+>>> squares + [36, 49, 64, 81, 100]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+
+
+
+          .:,.,,    
+         .i1tt1t:   
+         i1tfLtft   
+        ,ffffffff.  
+        .1LCLffti   
+          :fLf:.  \    
+   .       :LL;    \    python lists are mutable 
+  :,        :Lf:    
+  ;;,,..     1L1    
+  .,:;iiii;:.:t1.   
+       ..:ifLt11.   
+           .;Lt1,   
+             ,ii.  
+
+
+to append to list use append 
+ cubes.append(216) 
+
+Assignment to slices is also possible, and this can even change the size of the list or clear it entirely:
+>>>
+
+>>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+>>> letters
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+>>> # replace some values
+>>> letters[2:5] = ['C', 'D', 'E']
+>>> letters
+['a', 'b', 'C', 'D', 'E', 'f', 'g']
+>>> # now remove them
+>>> letters[2:5] = []
+>>> letters
+['a', 'b', 'f', 'g']
+>>> # clear the list by replacing all the elements with an empty list
+>>> letters[:] = []
+>>> letters
+[]
+
+can nest lists 
+
+
+cool code 
+while a < 10:
+...     print(a)
+...     a, b = b, a+b
+
+strings and non sttrings 
+print('The value of i is', i)
+
+
+          .:,.,,    
+         .i1tt1t:   
+         i1tfLtft   
+        ,ffffffff.  
+        .1LCLffti   
+          :fLf:.  \    
+   .       :LL;    \  Since ** has higher precedence than -, -3**2 will be interpreted as -(3**2)
+  :,        :Lf:       and thus result in -9. To avoid this and get 9, you can use (-3)**2.
+  ;;,,..     1L1    
+  .,:;iiii;:.:t1.   
+       ..:ifLt11.   
+           .;Lt1,   
+             ,ii.
+
