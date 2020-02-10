@@ -1198,4 +1198,773 @@ a (Error)
                 .11  11.                
                   ;  ;    
 
-                  
+Tuples and Sequences                  
+A tuple consists of a number of values separated by commas, for instance:
+they are immutable
+tuple = (1,[1,2,3],4    )
+
+>>> # Tuples may be nested:
+... u = t, (1, 2, 3, 4, 5)
+>>> u
+((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
+
+if the amounts are equal you can do this 
+x, y, z = t
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+
+Sets 
+A set is an unordered collection with no duplicate elements.
+
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
+>>> a                                  # unique letters in a
+{'a', 'r', 'b', 'c', 'd'}
+>>> a - b                              # letters in a but not in b
+{'r', 'd', 'b'}
+>>> a | b                              # letters in a or b or both
+{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+>>> a & b                              # letters in both a and b
+{'a', 'c'}
+>>> a ^ b                              # letters in a or b but not both
+{'r', 'd', 'b', 'm', 'z', 'l'}
+
+
+set comprehension
+>>> a = {x for x in 'abracadabra' if x not in 'abc'}
+>>> a
+{'r', 'd'}
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;      
+
+Dictionaries
+
+>>> tel = {'jack': 4098, 'sape': 4139}
+>>> tel['guido'] = 4127
+>>> tel
+{'jack': 4098, 'sape': 4139, 'guido': 4127}
+>>> tel['jack']
+4098
+>>> del tel['sape']
+>>> tel['irv'] = 4127
+>>> tel
+{'jack': 4098, 'guido': 4127, 'irv': 4127}
+>>> list(tel)
+['jack', 'guido', 'irv']
+>>> sorted(tel)
+['guido', 'irv', 'jack']
+>>> 'guido' in tel
+True
+>>> 'jack' not in tel
+False
+
+dict() makes from key value pairs  
+>>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+{'sape': 4139, 'guido': 4127, 'jack': 4098}
+
+>>> {x: x**2 for x in (2, 4, 6)}
+{2: 4, 4: 16, 6: 36}
+
+
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                               
+looping techniques
+
+to loop througn dicts use .items
+>>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+>>> for k, v in knights.items():
+...     print(k, v)
+...                             
+
+to get indices use 
+>>> for i, v in enumerate(['tic', 'tac', 'toe']):
+...     print(i, v)
+
+
+
+To loop over two or more sequences at the same time, the entries can be paired with the zip() function.
+>>>
+
+>>> questions = ['name', 'quest', 'favorite color']
+>>> answers = ['lancelot', 'the holy grail', 'blue']
+>>> for q, a in zip(questions, answers):
+...     print('What is your {0}?  It is {1}.'.format(q, a))
+...
+What is your name?  It is lancelot.
+What is your quest?  It is the holy grail.
+What is your favorite color?  It is blue.
+
+
+
+to reverse a sequence 
+>>> for i in reversed(range(1, 10, 2)):
+...     print(i)
+
+
+unaltering sort 
+>>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+>>> for f in sorted(set(basket)):
+...     print(f)
+...
+apple
+banana
+orange
+pear
+
+
+           .    :,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;  
+
+Conditions 
+
+comparisons can be chained 
+ a < b == c
+  a is less than b and moreover b equals c.
+
+ The comparison operators in and not in check whether a value occurs (does not occur) in a sequence. 
+ The operators is and is not compare whether two objects are really the same object;
+
+not 
+A and not B or C
+is
+(A and (not B)) or C)
+
+
+
+          .:,.,,    
+         .i1tt1t:   
+         i1tfLtft   
+        ,ffffffff.  
+        .1LCLffti   
+          :fLf:.  \      Note that in Python, unlike C, assignment inside expressions must be done explicitly with the walrus operator :=. 
+   .       :LL;    \     This avoids a common class of problems encountered in C programs: typing = in an expression when == was intended
+  :,        :Lf:    
+  ;;,,..     1L1    
+  .,:;iiii;:.:t1.   
+       ..:ifLt11.   
+           .;Lt1,   
+             ,ii.  
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                               
+Comparing sequence types                                
+do if the data type has capability
+
+
+(1, 2, 3)              < (1, 2, 4)
+[1, 2, 3]              < [1, 2, 4]
+'ABC' < 'C' < 'Pascal' < 'Python'
+(1, 2, 3, 4)           < (1, 2, 4)
+(1, 2)                 < (1, 2, -1)
+(1, 2, 3)             == (1.0, 2.0, 3.0)
+(1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)
+
+
+
+
+
+
+                                          .::;i1t;
+                                       ,:ifffft1;.
+                            :i1fLttt11fLfft11:.   
+                          ,fGGCGCCGGCCf1tLfi.     
+                         :GCLGGGffffCCt;fLt:      
+                         fCLCC1.    .:1tf1ii,     
+                        :CfLGG:        .:i1i::..  
+                        ,CCLCC1.          .,::;;. 
+                         18GLLCf:.                
+                          tGCLLGLf;,.             
+                           ;C80LLCCft;,.          
+                             ;LGCLLLCL1t;,.       
+                          :1tttC0880GLLL1;;;.     
+                         1G0GGGCG08@0GGCGL1i1:    
+                        iG0GG00LLLCG8800GGCtLt,   
+     .;1tLfft11;:;;:::,,f080000GCCGCCG080GGCf1;   
+   ,tCGG088GG00GLGGLCCLLLCCGGGGGGGGCLCGG00G0L1,   
+  ;GGGC08880000G088GG0G0GGGGCCCCCCCCCG8GG00Gt;    
+ :00GC0L10000GGGGCC08880GGCGGGGGGCCCG080GGGt:     
+.fC008C .CG0080CCLLC0880GCLLLLLCCGGGCLC0GL:.      
+,CLCGGfi1fLLCGCLGGCG80080GGCG0GC08000GfLGt,..     
+.fGGCLC00GLL00GC00GGG00@@80GGGGGGGGGGGGLL;,.      
+ :LCGGCCG0GCG0GCGGGGGGCG0GCCCCGGGGGGCLLt;..       
+  .;1tfLCCCGGGCCCCLft;:,,....,,:::::,.            
+      ..,::::::,,.. 
+
+
+Modules
+
+a different way to run a file 
+
+Python38_Folder/fibo.py 
+take that module place in the interpreter 
+import fibo 
+and use the fn like so 
+fib
+
+>>> fibo.fib(1000)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;   
+
+
+using from 
+>>> from fibo import fib, fib2
+>>> fib(500)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+
+dont  do this 
+>>> from fibo import *
+>>> fib(500)
+
+
+
+          .:,.,,    
+         .i1tt1t:   
+         i1tfLtft   
+        ,ffffffff.  
+        .1LCLffti   
+          :fLf:.  \    
+   .       :LL;    \   For efficiency reasons, each module is only imported once per interpreter session. 
+  :,        :Lf:       Therefore, if you change your modules, you must restart the interpreter – or, if it’s just one 
+  ;;,,..     1L1        one module you want to test interactively, use importlib.reload(), e.g. import importlib; importlib.reload(modulename).
+  .,:;iiii;:.:t1.   
+       ..:ifLt11.   
+           .;Lt1,   
+             ,ii.  
+
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.      
+
+
+to execute your module as a Scripts 
+
+python fibo.py <arguments>
+
+however u must do at the end of your script
+if __name__ == "__main__":
+    import sys
+    fib(int(sys.argv[1]))
+
+and yr script goes there,
+now it can be used as both    
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                               
+
+Module Search Path 
+when python looks for a program 
+built in -> current dir -> PYTHONPATH ->  installation-dependent default.
+basically try to keep modules and scripts different names 
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                               
+
+to speed module loading
+__pycache__ is made in the directory of execution 
+the module or script gets a [name]cpython-[ver].pyc name7
+it checks the data to see if it needs to be recompiled
+platform indpependent unlike node 
+
+
+
+          .:,.,,    
+         .i1tt1t:   
+         i1tfLtft   
+        ,ffffffff.  
+        .1LCLffti   
+          :fLf:.  \    
+You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. 
+The -O switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings.     
+some progroams rely on these be careful
+
+
+the module compileall can create .pyc files for all modules in a directory
+   .       :LL;    \ 
+  :,        :Lf:    
+  ;;,,..     1L1    
+  .,:;iiii;:.:t1.   
+       ..:ifLt11.   
+           .;Lt1,   
+             ,ii.  
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.      
+
+Standard modules
+
+sys module in every intrepreter 
+sys.ps1 & sys.ps2 change yr shell prompts 
+These two variables are only defined if the interpreter is in interactive mode.
+>>> import sys
+>>> sys.ps1
+'>>> '
+>>> sys.ps2
+'... '
+>>> sys.ps1 = 'C> '
+C> print('Yuck!')
+Yuck!
+C>
+
+
+sys.path
+represts PYTHONPATH or a built in default 
+
+
+dir()
+its tells you all the names ( variables, modules, functions, etc.) a module has 
+
+>>> import fibo, sys
+>>> dir(fibo)
+['__name__', 'fib', 'fib2']
+>>> dir(sys) 
+
+big list
+
+to get the builtin names 
+>>> import builtins
+>>> dir(builtins)
+big list 
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.      
+
+Packages 
+
+help you deal with shit 
+
+sound/                          Top-level package
+      __init__.py               Initialize the sound package
+      formats/                  Subpackage for file format conversions
+              __init__.py
+              wavread.py
+              wavwrite.py
+              aiffread.py
+              aiffwrite.py
+              auread.py
+              auwrite.py
+              ...
+      effects/                  Subpackage for sound effects
+              __init__.py
+              echo.py
+              surround.py
+              reverse.py
+              ...
+      filters/                  Subpackage for filters
+              __init__.py
+              equalizer.py
+              vocoder.py
+              karaoke.py
+              ...
+
+ __init__.py   
+ makes the directory a package
+ now you can say 
+
+ import sound.effects.echo
+ sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)
+
+from sound.effects.echo import echofilter
+ echofilter(input, output, delay=0.7, atten=4)
+
+if you have problem import or from a different a way 
+
+
+dont do 
+Importing * From a Package
+
+its there but we never use it 
+Packages in Multiple Directories
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                               
+
+. Intra-package References¶
+from . import echo
+from .. import formats
+from ..filters import equalizer  
+
+if its a main module __name__ = '__main__' abs import
+                                
+
+
+
+
+                                          .::;i1t;
+                                       ,:ifffft1;.
+                            :i1fLttt11fLfft11:.   
+                          ,fGGCGCCGGCCf1tLfi.     
+                         :GCLGGGffffCCt;fLt:      
+                         fCLCC1.    .:1tf1ii,     
+                        :CfLGG:        .:i1i::..  
+                        ,CCLCC1.          .,::;;. 
+                         18GLLCf:.                
+                          tGCLLGLf;,.             
+                           ;C80LLCCft;,.          
+                             ;LGCLLLCL1t;,.       
+                          :1tttC0880GLLL1;;;.     
+                         1G0GGGCG08@0GGCGL1i1:    
+                        iG0GG00LLLCG8800GGCtLt,   
+     .;1tLfft11;:;;:::,,f080000GCCGCCG080GGCf1;   
+   ,tCGG088GG00GLGGLCCLLLCCGGGGGGGGCLCGG00G0L1,   
+  ;GGGC08880000G088GG0G0GGGGCCCCCCCCCG8GG00Gt;    
+ :00GC0L10000GGGGCC08880GGCGGGGGGCCCG080GGGt:     
+.fC008C .CG0080CCLLC0880GCLLLLLCCGGGCLC0GL:.      
+,CLCGGfi1fLLCGCLGGCG80080GGCG0GC08000GfLGt,..     
+.fGGCLC00GLL00GC00GGG00@@80GGGGGGGGGGGGLL;,.      
+ :LCGGCCG0GCG0GCGGGGGGCG0GCCCCGGGGGGCLLt;..       
+  .;1tfLCCCGGGCCCCLft;:,,....,,:::::,.            
+      ..,::::::,,.. 
+
+
+
+Input and output 
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;   
+
+
+Fancier Output Formatting
+
+formatted string literals,
+>>> year = 2016
+>>> event = 'Referendum'
+>>> f'Results of the {year} {event}'
+'Results of the 2016 Referendum' 
+
+str.format()
+>>> yes_votes = 42_572_654
+>>> no_votes = 43_132_495
+>>> percentage = yes_votes / (yes_votes + no_votes)
+>>> '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)
+' 42572654 YES votes  49.67%'
+
+
+
+ convert any value to a string 
+  the repr() or str() functions.
+  repr() is like JSON.stringify stirngifies heavy objects
+
+  >>> s = 'Hello, world.'
+>>> str(s)
+'Hello, world.'
+>>> repr(s)
+"'Hello, world.'"
+>>> str(1/7)
+'0.14285714285714285'
+>>> x = 10 * 3.25
+>>> y = 200 * 200
+>>> s = 'The value of x is ' + repr(x) + ', and y is ' + repr(y) + '...'
+>>> print(s)
+The value of x is 32.5, and y is 40000...
+>>> # The repr() of a string adds string quotes and backslashes:
+... hello = 'hello, world\n'
+>>> hellos = repr(hello)
+>>> print(hellos)
+'hello, world\n'
+>>> # The argument to repr() may be any Python object:
+... repr((x, y, ('spam', 'eggs')))
+"(32.5, 40000, ('spam', 'eggs'))"
+
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                               
+
+Formatted string literals
+lets u include evaluations
+>>> import math
+>>> print(f'The value of pi is approximately {math.pi:.3f}.')
+The value of pi is approximately 3.142.
+
+
+
+Passing an integer after the ':' will cause that field to be a minimum number of characters wide. 
+>>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}
+>>> for name, phone in table.items():
+...     print(f'{name:10} ==> {phone:10d}')
+...
+Sjoerd     ==>       4127
+Jack       ==>       4098
+Dcab       ==>       7678
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.           
+
+The String format() Method
+
+>>> print('We are the {} who say "{}!"'.format('knights', 'Ni'))
+We are the knights who say "Ni!"
+
+
+>>> print('{0} and {1}'.format('spam', 'eggs'))
+spam and eggs
+>>> print('{1} and {0}'.format('spam', 'eggs'))
+eggs and spam
+
+
+keywords 
+>>> print('This {food} is {adjective}.'.format(
+...       food='spam', adjective='absolutely horrible'))
+This spam is absolutely horrible.
+
+
+pos & key 
+>>> print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',
+                                                       other='Georg'))
+The story of Bill, Manfred, and Georg.
+
+
+
+
+>>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
+>>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '
+...       'Dcab: {0[Dcab]:d}'.format(table))
+>>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
+Jack: 4098; Sjoerd: 4127; Dcab: 8637678
+
+
+to get a cool table going,
+firgure out how to do nore 
+>>> for x in range(1, 11):
+...     print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
+...
+>>> for x in range(1, 11):
+...     print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')
+...     # Note use of 'end' on previous line
+...     print(repr(x*x*x).rjust(4))
+ 1   1    1
+ 2   4    8
+ 3   9   27
+ 4  16   64
+ 5  25  125
+ 6  36  216
+ 7  49  343
+ 8  64  512
+ 9  81  729
+10 100 1000
+
+
+str.zfill()
+>>> '12'.zfill(5)
+'00012'
+>>> '-3.14'.zfill(7)
+'-003.14'
+>>> '3.14159265359'.zfill(5)
+'3.14159265359'
+
+
+using %
+>>> import math
+>>> print('The value of pi is approximately %5.3f.' % math.pi)
+The value of pi is approximately 3.142.
