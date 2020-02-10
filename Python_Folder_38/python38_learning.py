@@ -1019,4 +1019,183 @@ list.copy()
 
     Return a shallow copy of the list. Equivalent to a[:].
 
+
+you can use a list as a stack w/ append 
+
+you can use a collections.deque  as a queue
+>>> from collections import deque
+>>> queue = deque(["Eric", "John", "Michael"])
+>>> queue.append("Terry")           # Terry arrives
+>>> queue.append("Graham")          # Graham arrives
+>>> queue.popleft()                 # The first to arrive now leaves
+'Eric'
+>>> queue.popleft()                 # The second to arrive now leaves
+'John'
+>>> queue                           # Remaining queue in order of arrival
+deque(['Michael', 'Terry', 'Graham'])
+
  
+
+          .:,.,,    
+         .i1tt1t:   
+         i1tfLtft   
+        ,ffffffff.  
+        .1LCLffti   
+          :fLf:.  \    
+   .       :LL;    \   Not all data can be sorted or compared in python 
+  :,        :Lf:    
+  ;;,,..     1L1    
+  .,:;iiii;:.:t1.   
+       ..:ifLt11.   
+           .;Lt1,   
+             ,ii.  
+
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                               
+List comprehension
+different ways to get yr lists                                
+ 
+this 
+>>> squares = []
+>>> for x in range(10):
+...     squares.append(x**2)
+equals 
+squares = [x**2 for x in range(10)]          
+
+
+>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+equals 
+combs = []
+>>> for x in [1,2,3]:
+...     for y in [3,1,4]:
+...         if x != y:
+...             combs.append((x, y))
+
+[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+
+to flatten
+>>> vec = [[1,2,3], [4,5,6], [7,8,9]]
+>>> [num for elem in vec for num in elem]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+you can do anything 
+ from math import pi
+>>> [str(round(pi, i)) for i in range(1, 6)]
+['3.1', '3.14', '3.142', '3.1416', '3.14159']
+
+
+            .tt:,.                         ;1CLff1i.        
+         .:1fLG8Cf;                       1L1fffti..,       
+       .ifft1fLL1tC.                    ,10CC;itt:;;,       
+       ,iitftt,,ift.                      tCL1.:,.   ..     
+      .::ii1Lt;tti.   .:i.,. ,tt:          ;11i1ttfLCCi     
+      :tfftfftL1      .1LfCf1: 1t          ,tLt1tiiGLCCL;   
+   ,ifGft1iftLfLf,   ..,1fLCLiif;;,      ,fCLtLtt: :,tLGGt  
+   10CC0t. .:1ttCt  ;Lf1fffCfLCftCG;     fLLL1t1;.  .tfLG0; 
+  ;CLftt:  .:fft1, :fCCLt1i1LLffffLt;:,  1GLLt1:     ,ifLC: 
+ ,CLLLLf. .fLfC1  :LLt1ftiitf11fLLffLft;  ;tff11;      ;ff, 
+ .i1;1LL.  fL1ft.ifC1.fttt1tftfLGCfL111i::,::iCt11:     .i: 
+    ,ff:   LtittitCGi ,t1itLLCCLf. fCf1ittfCLfCLt1t:     .  
+    ti.    iLfftttC; .;tLiiftLCi.  ,tfftfCCCCCftftt:        
+    ..      ,i1fff;  .LGGLCCCC0G,    .,.,:;;iii11i:         
+               ...   ifCGCLfffCGf.                          
+                    ,t1tLfttfffGG:         ,;iii;:.         
+                    itfLfffftttLCL.     :1fftiiii1f:        
+                   :tfC0Ltfftt11LGL..:1LCt:.      ;i        
+                   ifLL1::tft11fLGCCCGL1,         ,.        
+                   iLC1,1t1tLCLCGi:.                     
+                   .tft,;i;;tGCi.                      
+
+Nested list comprehension
+matrix = [
+...     [1, 2, 3, 4],
+...     [5, 6, 7, 8],
+...     [9, 10, 11, 12],
+... ]
+[[row[i] for row in matrix] for i in range(4)]
+
+equals 
+single list comprehension
+transposed = []
+>>> for i in range(4):
+...     transposed.append([row[i] for row in matrix])
+...
+>>> transposed
+equals 
+transposed = []
+>>> for i in range(4):
+...     # the following 3 lines implement the nested listcomp
+...     transposed_row = []
+...     for row in matrix:
+...         transposed_row.append(row[i])
+...     transposed.append(transposed_row)
+
+[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;          
+
+del statement
+used to remove by index 
+>>> a = [-1, 1, 66.25, 333, 333, 1234.5]
+>>> del a[0]
+>>> a
+[1, 66.25, 333, 333, 1234.5]
+>>> del a[2:4]
+>>> a
+[1, 66.25, 1234.5]
+>>> del a[:]
+>>> a
+[]
+>>> del a
+a (Error)
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+                  
