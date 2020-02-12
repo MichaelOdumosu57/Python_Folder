@@ -1968,3 +1968,110 @@ using %
 >>> import math
 >>> print('The value of pi is approximately %5.3f.' % math.pi)
 The value of pi is approximately 3.142.
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;   
+
+
+Reading and writing to files 
+
+to open  a file 
+ f = open('workfile', 'w')
+
+
+with ,replaces try-catch 
+>>> with open('workfile') as f:
+...     read_data = f.read()
+
+>>> # We can check that the file has been automatically closed.
+>>> f.closed
+True
+
+use it to close a file 
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                               
+
+File Object Methods 
+
+f.read(size)
+returns trucancted file in size bytes,if none bytes are given gives the whole file, it should not be bigger than memory
+
+f.readline() reads a single line from the file; 
+
+if you dealing w/ massive files 
+>>> for line in f:
+...     print(line, end='')
+
+
+
+to write to a file 
+ f.write('This is a test\n')
+
+you must convert to a string or a binary
+>>> value = ('the answer', 42)
+>>> s = str(value)  # convert the tuple to string
+>>> f.write(s)  
+
+
+f.tell()
+positiong of file object from start of file 
+
+to change file  object position 
+ f.seek(offset, whence).
+
+
+f.seek(5)      # Go to the 6th byte in the file
+5
+>>> f.read(1)
+b'5'
+>>> f.seek(-3, 2)  # Go to the 3rd byte before the end
+13
+>>> f.read(1)
+
+
+
+We save structured data w/ JSON 
+to view  JSON string representation with a simple line of code:
+>>> import json
+>>> json.dumps([1, 'simple', 'list'])
+'[1, "simple", "list"]'
+
+
+to serealize to a text file 
+json.dump(x, f)
+
+to decode 
+x = json.load(f)
+
+also use pickle dealing w/ complex python-only object, be careful a skilled attacker can execute arbitrary python code w/ it 
+
