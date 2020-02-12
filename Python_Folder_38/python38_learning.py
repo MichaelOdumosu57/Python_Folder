@@ -2062,16 +2062,253 @@ b'5'
 
 We save structured data w/ JSON 
 to view  JSON string representation with a simple line of code:
->>> import json
->>> json.dumps([1, 'simple', 'list'])
-'[1, "simple", "list"]'
+
+                                          .::;i1t;
+                                       ,:ifffft1;.
+                            :i1fLttt11fLfft11:.   
+                          ,fGGCGCCGGCCf1tLfi.     
+                         :GCLGGGffffCCt;fLt:      
+                         fCLCC1.    .:1tf1ii,     
+                        :CfLGG:        .:i1i::..  
+                        ,CCLCC1.          .,::;;. 
+                         18GLLCf:.                
+                          tGCLLGLf;,.             
+                           ;C80LLCCft;,.          
+                             ;LGCLLLCL1t;,.       
+                          :1tttC0880GLLL1;;;.     
+                         1G0GGGCG08@0GGCGL1i1:    
+                        iG0GG00LLLCG8800GGCtLt,   
+     .;1tLfft11;:;;:::,,f080000GCCGCCG080GGCf1;   
+   ,tCGG088GG00GLGGLCCLLLCCGGGGGGGGCLCGG00G0L1,   
+  ;GGGC08880000G088GG0G0GGGGCCCCCCCCCG8GG00Gt;    
+ :00GC0L10000GGGGCC08880GGCGGGGGGCCCG080GGGt:     
+.fC008C .CG0080CCLLC0880GCLLLLLCCGGGCLC0GL:.      
+,CLCGGfi1fLLCGCLGGCG80080GGCG0GC08000GfLGt,..     
+.fGGCLC00GLL00GC00GGG00@@80GGGGGGGGGGGGLL;,.      
+ :LCGGCCG0GCG0GCGGGGGGCG0GCCCCGGGGGGCLLt;..       
+  .;1tfLCCCGGGCCCCLft;:,,....,,:::::,.            
+      ..,::::::,,.. 
+
+Errors and Exceptions 
+       
 
 
-to serealize to a text file 
-json.dump(x, f)
+Syntax errors 
 
-to decode 
-x = json.load(f)
 
-also use pickle dealing w/ complex python-only object, be careful a skilled attacker can execute arbitrary python code w/ it 
 
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;          
+
+
+Exceptions
+
+handling Exceptions
+>>> while True:
+...     try:
+...         x = int(input("Please enter a number: "))
+...         break
+...     except ValueError:
+...         print("Oops!  That was no valid number.  Try again...")
+
+wonky things happen when you have several execepts, they must classes that go in there 
+
+
+else 
+code to execute when try does not raise an Exceptions
+
+for arg in sys.argv[1:]:
+    try:
+        f = open(arg, 'r')
+    except OSError:
+        print('cannot open', arg)
+    else:
+        print(arg, 'has', len(f.readlines()), 'lines')
+        f.close()
+
+
+try can catch errors in fn 
+
+
+if you do not know the exception error use the parent class and cast to an it
+
+
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;          
+
+
+Raise Exceptions 
+
+
+to raise an exception you need an instance error or class error 
+raise ValueError
+
+
+to see if a certain error was raised w/o handling 
+>>> try:
+...     raise NameError('HiThere')
+... except NameError:
+...     print('An exception flew by!')
+...     raise
+
+             .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;        
+
+User defined expr 
+a good practice make a base error handler then specifc one 
+
+class Error(Exception):
+    """Base class for exceptions in this module."""
+    pass
+
+class InputError(Error):
+    """Exception raised for errors in the input.
+
+    Attributes:
+        expression -- input expression in which the error occurred
+        message -- explanation of the error
+    """
+
+    def __init__(self, expression, message):
+        self.expression = expression
+        self.message = message
+
+class TransitionError(Error):
+    """Raised when an operation attempts a state transition that's not
+    allowed.
+
+    Attributes:
+        previous -- state at beginning of transition
+        next -- attempted new state
+        message -- explanation of why the specific transition is not allowed
+    """
+
+    def __init__(self, previous, next, message):
+        self.previous = previous
+        self.next = next
+        self.message = message
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;  
+
+to perform cleanup after all exception                  
+>>> try:
+...     raise KeyboardInterrupt
+... finally:
+...     print('Goodbye, world!')
+...                  
+
+lot of wonky stuff can go do refer here 
+
+
+ex 
+as you can see if you dont handle the specifc error, your program crashes
+>>> def divide(x, y):
+...     try:
+...         result = x / y
+...     except ZeroDivisionError:
+...         print("division by zero!")
+...     else:
+...         print("result is", result)
+...     finally:
+...         print("executing finally clause")
+...
+>>> divide(2, 1)
+result is 2.0
+executing finally clause
+>>> divide(2, 0)
+division by zero!
+executing finally clause
+>>> divide("2", "1")
+executing finally clause
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in divide
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;   
+
+
+
+use the with statement to handle your problems
+its smart deals w/ async all error sudden nonsense
+with open("myfile.txt") as f:
+    for line in f:
+        print(line, end="")
