@@ -2312,3 +2312,392 @@ its smart deals w/ async all error sudden nonsense
 with open("myfile.txt") as f:
     for line in f:
         print(line, end="")
+
+
+
+
+                                          .::;i1t;
+                                       ,:ifffft1;.
+                            :i1fLttt11fLfft11:.   
+                          ,fGGCGCCGGCCf1tLfi.     
+                         :GCLGGGffffCCt;fLt:      
+                         fCLCC1.    .:1tf1ii,     
+                        :CfLGG:        .:i1i::..  
+                        ,CCLCC1.          .,::;;. 
+                         18GLLCf:.                
+                          tGCLLGLf;,.             
+                           ;C80LLCCft;,.          
+                             ;LGCLLLCL1t;,.       
+                          :1tttC0880GLLL1;;;.     
+                         1G0GGGCG08@0GGCGL1i1:    
+                        iG0GG00LLLCG8800GGCtLt,   
+     .;1tLfft11;:;;:::,,f080000GCCGCCG080GGCf1;   
+   ,tCGG088GG00GLGGLCCLLLCCGGGGGGGGCLCGG00G0L1,   
+  ;GGGC08880000G088GG0G0GGGGCCCCCCCCCG8GG00Gt;    
+ :00GC0L10000GGGGCC08880GGCGGGGGGCCCG080GGGt:     
+.fC008C .CG0080CCLLC0880GCLLLLLCCGGGCLC0GL:.      
+,CLCGGfi1fLLCGCLGGCG80080GGCG0GC08000GfLGt,..     
+.fGGCLC00GLL00GC00GGG00@@80GGGGGGGGGGGGLL;,.      
+ :LCGGCCG0GCG0GCGGGGGGCG0GCCCCGGGGGGCLLt;..       
+  .;1tfLCCCGGGCCCCLft;:,,....,,:::::,.            
+      ..,::::::,,.. 
+
+
+
+classses 
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+
+A namespace is a mapping from names to objects.
+ The important thing to know about namespaces is that there is absolutely no relation between names in different namespaces
+ two different modules might have them, users must prefix them
+
+ The local namespace for a function is created when the function is called, and deleted when the function returns or raises an exception that is not handled within the function
+ you have access to a couple of scopes 
+
+ scoping ex
+
+ def scope_test():
+    def do_local():
+        spam = "local spam"
+
+    def do_nonlocal():
+        nonlocal spam
+        spam = "nonlocal spam"
+
+    def do_global():
+        global spam
+        spam = "global spam"
+
+    spam = "test spam"
+    do_local()
+    print("After local assignment:", spam)
+    do_nonlocal()
+    print("After nonlocal assignment:", spam)
+    do_global()
+    print("After global assignment:", spam)
+
+scope_test()
+print("In global scope:", spam)
+
+After local assignment: test spam
+After nonlocal assignment: nonlocal spam
+After global assignment: nonlocal spam
+In global scope: global spam
+
+so nonlocal rules once the scope its called in is allibe 
+
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;  
+
+classes
+
+class ClassName:
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+
+
+class MyClass:
+    """A simple example class"""
+    i = 12345
+
+    def f(self):
+        return 'hello world'
+
+
+
+so you got attr references 
+MyClass.i 
+MyClass.f
+MyClass.__doc__ 
+
+to instantiate a class 
+x = MyClass()
+
+classes like to use init a lot to start a certain, in ruby no need just write tht somewhere like its a block of code 
+def __init__(self):
+    self.data = []
+
+>>> class Complex:
+...     def __init__(self, realpart, imagpart):
+...         self.r = realpart
+...         self.i = imagpart
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                               
+
+Instance Object 
+
+like any object nothing crazy
+
+file: instance__obj__.py 
+
+
+        ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                             
+
+method objects 
+
+can do this  and u will not lose self reference 
+it might be you can access the object instance in the args 
+xf = x.f
+while True:
+    print(xf())
+
+
+       ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.                                                                    
+                             
+
+class and instance vars
+
+do not use mutable objects its instantiation in a class would be it would be shared
+across all object class instantiation
+
+
+to confuse attackers 
+
+# Function defined outside the class
+def f1(self, x, y):
+    return min(x, x+y)
+
+class C:
+    f = f1
+
+    def g(self):
+        return 'hello world'
+
+    h = g
+
+where f can be 
+
+    def f(self, x, y):
+        return min(x, x+y)
+
+
+to call methods use self 
+class Bag:
+    def __init__(self):
+        self.data = []
+
+    def add(self, x):
+        self.data.append(x)
+
+    def addtwice(self, x):
+        self.add(x)
+        self.add(x)
+
+object.__class__.
+where each object type is stored
+
+
+       ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.     
+
+Inheritance 
+
+class DerivedClassName(BaseClassName):
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+
+
+
+isinstance(obj, int)
+TRUE if obj type is int or obj derived from int 
+
+issubclass() to check class inheritance: 
+issubclass(bool, int)  = True 
+
+
+
+take this
+class Mapping:
+    def __init__(self, iterable):
+        self.items_list = []
+        self.__update(iterable)
+
+    def update(self, iterable):
+        for item in iterable:
+            self.items_list.append(item)
+
+    __update = update   # private copy of original update() method
+
+class MappingSubclass(Mapping):
+
+    def update(self, keys, values):
+        # provides new signature for update()
+        # but does not break __init__()
+        for item in zip(keys, values):
+            self.items_list.append(item)
+
+
+
+       ,i;i:.                          
+     .:ii, ;ft11i:                      
+   ,itttCi:11tfCGCt:                    
+  :Lfft11i1i:11i1tLC:                   
+  .,::;i:::,,, .;fGC, .:1fft1,          
+ .:i::i,   ..,;tft;..1LCGCCCG;          
+ .i;.,,..,:1ft11:  ifCGf;iLGt           
+     .,;tft1i,   :LGCf1:1Cf: .;11,      
+   .:itfL1,    ;LCLLt;iLL; .1CCLC.      
+  .:iLCG;  .:1fLGCf::1Ct  ;C0f:t1    ,, 
+ .,;1LLCLfLLCGGLt; .1CG;;LGC1 .1f;:;;:. 
+   .;tLCGGCCLf1,   ,;fCCGC1,   .,::.    
+     .:;ii;:,      . .:;:.     
+
+Iterators 
+
+for element in [1, 2, 3]:
+    print(element)
+for element in (1, 2, 3):
+    print(element)
+for key in {'one':1, 'two':2}:
+    print(key)
+for char in "123":
+    print(char)
+for line in open("myfile.txt"):
+    print(line, end='')
+
+
+
+to make an iterator 
+>>> s = 'abc'
+>>> it = iter(s)
+>>> it
+<iterator object at 0x00A1DB50>
+>>> next(it)
+'a'
+>>> next(it)
+'b'
+>>> next(it)
+'c'
+>>> next(it)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    next(it)
+StopIteration
+
+
+make a custom iterator 
+class Reverse:
+    """Iterator for looping over a sequence backwards."""
+    def __init__(self, data):
+        self.data = data
+        self.index = len(data)
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index == 0:
+            raise StopIteration
+        self.index = self.index - 1
+        return self.data[self.index]
+
+
+
+
+          .:,.,,    
+         .i1tt1t:   
+         i1tfLtft   
+        ,ffffffff.  
+        .1LCLffti   
+          :fLf:.  \       modules have a secret read only __dict__ attr 
+   .       :LL;    \ 
+  :,        :Lf:    
+  ;;,,..     1L1    
+  .,:;iiii;:.:t1.   
+       ..:ifLt11.   
+           .;Lt1,   
+             ,ii.  
+        
+
+        
