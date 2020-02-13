@@ -2701,3 +2701,593 @@ class Reverse:
         
 
         
+
+                                          .::;i1t;
+                                       ,:ifffft1;.
+                            :i1fLttt11fLfft11:.   
+                          ,fGGCGCCGGCCf1tLfi.     
+                         :GCLGGGffffCCt;fLt:      
+                         fCLCC1.    .:1tf1ii,     
+                        :CfLGG:        .:i1i::..  
+                        ,CCLCC1.          .,::;;. 
+                         18GLLCf:.                
+                          tGCLLGLf;,.             
+                           ;C80LLCCft;,.          
+                             ;LGCLLLCL1t;,.       
+                          :1tttC0880GLLL1;;;.     
+                         1G0GGGCG08@0GGCGL1i1:    
+                        iG0GG00LLLCG8800GGCtLt,   
+     .;1tLfft11;:;;:::,,f080000GCCGCCG080GGCf1;   
+   ,tCGG088GG00GLGGLCCLLLCCGGGGGGGGCLCGG00G0L1,   
+  ;GGGC08880000G088GG0G0GGGGCCCCCCCCCG8GG00Gt;    
+ :00GC0L10000GGGGCC08880GGCGGGGGGCCCG080GGGt:     
+.fC008C .CG0080CCLLC0880GCLLLLLCCGGGCLC0GL:.      
+,CLCGGfi1fLLCGCLGGCG80080GGCG0GC08000GfLGt,..     
+.fGGCLC00GLL00GC00GGG00@@80GGGGGGGGGGGGLL;,.      
+ :LCGGCCG0GCG0GCGGGGGGCG0GCCCCGGGGGGCLLt;..       
+  .;1tfLCCCGGGCCCCLft;:,,....,,:::::,.            
+      ..,::::::,,.. 
+
+Brief tour std lib 
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;          
+
+
+
+os module for the operating system 
+>>> import os
+>>> os.getcwd()      # Return the current working directory
+'C:\\Python38'
+>>> os.chdir('/server/accesslogs')   # Change current working directory
+>>> os.system('mkdir today')   # Run the command mkdir in the system shell
+0
+
+
+
+to understand a module 
+>>> import os
+>>> dir(os)
+<returns a list of all module functions>
+>>> help(os)
+<returns an extensive manual page created from the module's docstrings>
+
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;     
+
+
+
+for file and and directory tasks 
+>>> import shutil
+>>> shutil.copyfile('data.db', 'archive.db')
+'archive.db'
+>>> shutil.move('/build/executables', 'installdir')
+'installdir'
+
+file regex 
+>>> import glob
+>>> glob.glob('*.py')
+['primes.py', 'random.py', 'quote.py']
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;     
+
+
+command line args 
+
+to get a list 
+>>> import sys
+>>> print(sys.argv)
+['demo.py', 'one', 'two', 'three']
+
+
+a sophisticated way to do stuff 
+
+file: argparse__.py 
+run command 
+python38 argparse__.py --lines=5 instance__method__.py mapping__subclass__.py
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;     
+
+error redirection
+useful when python does not want to show u the error
+sys.stderr.write('Warning, log file not found starting a new one\n')
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;     
+
+
+for string opeartions 
+>>> import re
+>>> re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest')
+['foot', 'fell', 'fastest']
+>>> re.sub(r'(\b[a-z]+) \1', r'\1', 'cat in the the hat')
+'cat in the hat'
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;     
+
+
+Mathematics  modules 
+
+math ,random ,statistics ,decimal  for much precison
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+internet access 
+urllib,smpt lib 
+
+
+
+>>> from urllib.request import urlopen
+>>> with urlopen('http://tycho.usno.navy.mil/cgi-bin/timer.pl') as response:
+...     for line in response:
+...         line = line.decode('utf-8')  # Decoding the binary data to text.
+...         if 'EST' in line or 'EDT' in line:  # look for Eastern Time
+...             print(line)
+
+<BR>Nov. 25, 09:43:32 PM EST
+
+TO SEND EMAIL
+
+>>> import smtplib
+>>> server = smtplib.SMTP('localhost')
+>>> server.sendmail('soothsayer@example.org', 'jcaesar@example.org',
+... """To: jcaesar@example.org
+... From: soothsayer@example.org
+...
+... Beware the Ides of March.
+... """)
+>>> server.quit()
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+
+datetime module 
+
+>>> # dates are easily constructed and formatted
+>>> from datetime import date
+>>> now = date.today()
+>>> now
+datetime.date(2003, 12, 2)
+>>> now.strftime("%m-%d-%y. %d %b %Y is a %A on the %d day of %B.")
+'12-02-03. 02 Dec 2003 is a Tuesday on the 02 day of December.'
+
+>>> # dates support calendar arithmetic
+>>> birthday = date(1964, 7, 31)
+>>> age = now - birthday
+>>> age.days
+14368
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+
+data compression 
+zlib, gzip, bz2, lzma, zipfile and tarfile.
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+
+Performance measurement 
+if you want to know how different code that does the same thing completes, heres how u know 
+timeit,profile,pstats 
+
+
+>>> from timeit import Timer
+>>> Timer('t=a; a=b; b=t', 'a=1; b=2').timeit()
+0.57535828626024577
+>>> Timer('a,b = b,a', 'a=1; b=2').timeit()
+0.54962537085770791
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+Quality Control
+
+you can test your functions to provide high Quality code 
+doctest,unittest
+
+file:quality__control.py
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+
+Batteries included
+
+xmlrpc client and xmlrpc server can do more 
+email package does everyhting email 
+json package does everything 
+sqlite3 give u yr own database
+i18n gettext, locale, and the codecs 
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+
+output formatting 
+reprlib, pprint(pretty print),textwrap(),locale
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+Templating 
+
+
+>>> from string import Template
+>>> t = Template('${village}folk send $$10 to $cause.')
+>>> t.substitute(village='Nottingham', cause='the ditch fund')
+'Nottinghamfolk send $10 to the ditch fund.'
+
+can also use template as an arg 
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;    
+
+Binary data, multi-threading
+
+struct,threading, zipfile
+
+file zip__async.py
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;   
+
+Logging 
+
+import logging
+logging.debug('Debugging information')
+logging.info('Informational message')
+logging.warning('Warning:config file %s not found', 'server.conf')
+logging.error('Error occurred')
+logging.critical('Critical error -- shutting down')
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;   
+
+Weak References 
+
+when you dont want a permanent reference  to an object
+
+file weakref__.py
+
+
+
+                .:,..,:.                
+                i1i::i1i                
+           .:;1tf1,  ,1ft1;:.           
+        ,;1fLLLL1;i  i;1LLLLf1;,        
+      :1fLLLft1;:,;::;,:;1tfLLLf1:      
+    .1Lffff1;i111.    .111i;1ffffL1.    
+   .tLfff1:i1111:      :1111i:1fffLt.   
+   iLffft,11111i        i11111,tfffLi   
+   iLffft,11111;        ;11111,tfffLi   
+   ,fLffLi,i111i        i111i,iLffLf,   
+    ,tLLfft:;i11,      ,11i;:tffLLt,    
+      :1ffLLfi;ii      ii;ifLLff1:      
+        .,;1fLLti:    :itLLf1;,.        
+             ,:1ft.  .tf1:,             
+                .11  11.                
+                  ;  ;  
+
+
+Working w/ lists 
+heapq, bisect,collections,deque
+
+>>> from collections import deque
+>>> d = deque(["task1", "task2", "task3"])
+>>> d.append("task4")
+>>> print("Handling", d.popleft())
+Handling task1
+
+sorting lists 
+>>> import bisect
+>>> scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]
+>>> bisect.insort(scores, (300, 'ruby'))
+>>> scores
+[(100, 'perl'), (200, 'tcl'), (300, 'ruby'), (400, 'lua'), (500, 'python')]
+
+
+
+
+                                          .::;i1t;
+                                       ,:ifffft1;.
+                            :i1fLttt11fLfft11:.   
+                          ,fGGCGCCGGCCf1tLfi.     
+                         :GCLGGGffffCCt;fLt:      
+                         fCLCC1.    .:1tf1ii,     
+                        :CfLGG:        .:i1i::..  
+                        ,CCLCC1.          .,::;;. 
+                         18GLLCf:.                
+                          tGCLLGLf;,.             
+                           ;C80LLCCft;,.          
+                             ;LGCLLLCL1t;,.       
+                          :1tttC0880GLLL1;;;.     
+                         1G0GGGCG08@0GGCGL1i1:    
+                        iG0GG00LLLCG8800GGCtLt,   
+     .;1tLfft11;:;;:::,,f080000GCCGCCG080GGCf1;   
+   ,tCGG088GG00GLGGLCCLLLCCGGGGGGGGCLCGG00G0L1,   
+  ;GGGC08880000G088GG0G0GGGGCCCCCCCCCG8GG00Gt;    
+ :00GC0L10000GGGGCC08880GGCGGGGGGCCCG080GGGt:     
+.fC008C .CG0080CCLLC0880GCLLLLLCCGGGCLC0GL:.      
+,CLCGGfi1fLLCGCLGGCG80080GGCG0GC08000GfLGt,..     
+.fGGCLC00GLL00GC00GGG00@@80GGGGGGGGGGGGLL;,.      
+ :LCGGCCG0GCG0GCGGGGGGCG0GCCCCGGGGGGCLLt;..       
+  .;1tfLCCCGGGCCCCLft;:,,....,,:::::,.            
+      ..,::::::,,.. 
+
+
+
+Virtual env 
+
+
+
