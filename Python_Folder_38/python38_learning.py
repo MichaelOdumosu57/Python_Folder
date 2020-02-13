@@ -3289,5 +3289,62 @@ sorting lists
 
 Virtual env 
 
+see we have python 2 and 3 and outside pacakges, might not be made to accomodate both
+you need venv which is a module 
+
+to create a venv  
+python3 -m venv tutorial-env
+
+to activate
+windows 
+    tutorial-env\Scripts\activate.bat
+
+should have used with this python 2 3 problem we have 
+linux 
+    source tutorial-env/bin/activate.bat    
 
 
+Managing packages w/ pip 
+: “search”, “install”, “uninstall”, “freeze”
+https://docs.python.org/3.8/installing/index.html#installing-index
+
+
+ pip list
+ see list of installed packages 
+
+
+for ci you can do this 
+pip freeze > requirements.txt
+in ci/cd 
+pip install -r requirements.txt
+
+
+                                    .::;i1t;
+                                       ,:ifffft1;.
+                            :i1fLttt11fLfft11:.   
+                          ,fGGCGCCGGCCf1tLfi.     
+                         :GCLGGGffffCCt;fLt:      
+                         fCLCC1.    .:1tf1ii,     
+                        :CfLGG:        .:i1i::..  
+                        ,CCLCC1.          .,::;;. 
+                         18GLLCf:.                
+                          tGCLLGLf;,.             
+                           ;C80LLCCft;,.          
+                             ;LGCLLLCL1t;,.       
+                          :1tttC0880GLLL1;;;.     
+                         1G0GGGCG08@0GGCGL1i1:    
+                        iG0GG00LLLCG8800GGCtLt,   
+     .;1tLfft11;:;;:::,,f080000GCCGCCG080GGCf1;   
+   ,tCGG088GG00GLGGLCCLLLCCGGGGGGGGCLCGG00G0L1,   
+  ;GGGC08880000G088GG0G0GGGGCCCCCCCCCG8GG00Gt;    
+ :00GC0L10000GGGGCC08880GGCGGGGGGCCCG080GGGt:     
+.fC008C .CG0080CCLLC0880GCLLLLLCCGGGCLC0GL:.      
+,CLCGGfi1fLLCGCLGGCG80080GGCG0GC08000GfLGt,..     
+.fGGCLC00GLL00GC00GGG00@@80GGGGGGGGGGGGLL;,.      
+ :LCGGCCG0GCG0GCGGGGGGCG0GCCCCGGGGGGCLLt;..       
+  .;1tfLCCCGGGCCCCLft;:,,....,,:::::,.            
+      ..,::::::,,.. 
+
+
+
+What now
