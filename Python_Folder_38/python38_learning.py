@@ -2956,6 +2956,64 @@ TO SEND EMAIL
 >>> server.quit()
 
 
+to get a server w/ GET routes going 
+
+
+class my_base_handler(http.server.BaseHTTPRequestHandler):
+    server_version = 'Apache/2.0'
+    sys_version= 'Java/Spring'
+    directory = 'none'    
+
+
+    def do_GET(self):
+        parsed_path = parse.urlparse(self.path)
+        content_length = int(self.headers['Content-Length']) # <--- Gets the size of data
+        if content_length != 0:
+            post_data = self.rfile.read(content_length) # <--- Gets the data itself    
+        elif (content_length == 0):
+            post_data = None          
+        message_parts = [
+            'CLIENT VALUES:',
+            'client_address={} ({})'.format(
+                self.client_address,
+                self.address_string()),
+            'command={}'.format(self.command),
+            'path={}'.format(self.path),
+            'real path={}'.format(parsed_path.path),
+            'query={}'.format(parsed_path.query),
+            'request_version={}'.format(self.request_version),
+            '',
+            'SERVER VALUES:',
+            'server_version={}'.format(self.server_version),
+            'sys_version={}'.format(self.sys_version),
+            'protocol_version={}'.format(self.protocol_version),
+            '',
+            'HEADERS RECEIVED:',
+        ]
+        for name, value in sorted(self.headers.items()):
+            message_parts.append(
+                '{}={}'.format(name, value.rstrip())
+            )
+        message_parts.append('')
+        message = '\r\n'.join(message_parts)
+        self.send_response(200)
+        self.send_header('Content-Type',
+                         'text/plain; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(message.encode('utf-8'))
+
+
+Handler =  my_base_handler
+
+if __name__ == "__main__":
+    with http.server.HTTPServer(("", 3001), Handler) as httpd:
+        print("serving at port")
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            pass
+        httpd.server_close()
+
                 .:,..,:.                
                 i1i::i1i                
            .:;1tf1,  ,1ft1;:.           
@@ -3319,7 +3377,7 @@ in ci/cd
 pip install -r requirements.txt
 
 
-                                    .::;i1t;
+                                        .::;i1t;
                                        ,:ifffft1;.
                             :i1fLttt11fLfft11:.   
                           ,fGGCGCCGGCCf1tLfi.     
@@ -3348,3 +3406,77 @@ pip install -r requirements.txt
 
 
 What now
+
+The python standard library
+https://docs.python.org/3.8/library/index.html#library-index
+
+language reference
+https://docs.python.org/3.8/reference/index.html#reference-index
+
+
+I like twisted
+Pylons Waitress
+really like tornado 
+   
+
+
+          .:,.,,    
+         .i1tt1t:   
+         i1tfLtft   
+        ,ffffffff.  
+        .1LCLffti   
+          :fLf:.  \    
+   .       :LL;    \   to change pip vv pip install pip==1.2.1
+  :,        :Lf:    
+  ;;,,..     1L1        if pypi doesnt have it u need to install another version 
+  .,:;iiii;:.:t1.   
+       ..:ifLt11.   
+           .;Lt1,   
+             ,ii.  
+
+
+
+                                        .::;i1t;
+                                       ,:ifffft1;.
+                            :i1fLttt11fLfft11:.   
+                          ,fGGCGCCGGCCf1tLfi.     
+                         :GCLGGGffffCCt;fLt:      
+                         fCLCC1.    .:1tf1ii,     
+                        :CfLGG:        .:i1i::..  
+                        ,CCLCC1.          .,::;;. 
+                         18GLLCf:.                
+                          tGCLLGLf;,.             
+                           ;C80LLCCft;,.          
+                             ;LGCLLLCL1t;,.       
+                          :1tttC0880GLLL1;;;.     
+                         1G0GGGCG08@0GGCGL1i1:    
+                        iG0GG00LLLCG8800GGCtLt,   
+     .;1tLfft11;:;;:::,,f080000GCCGCCG080GGCf1;   
+   ,tCGG088GG00GLGGLCCLLLCCGGGGGGGGCLCGG00G0L1,   
+  ;GGGC08880000G088GG0G0GGGGCCCCCCCCCG8GG00Gt;    
+ :00GC0L10000GGGGCC08880GGCGGGGGGCCCG080GGGt:     
+.fC008C .CG0080CCLLC0880GCLLLLLCCGGGCLC0GL:.      
+,CLCGGfi1fLLCGCLGGCG80080GGCG0GC08000GfLGt,..     
+.fGGCLC00GLL00GC00GGG00@@80GGGGGGGGGGGGLL;,.      
+ :LCGGCCG0GCG0GCGGGGGGCG0GCCCCGGGGGGCLLt;..       
+  .;1tfLCCCGGGCCCCLft;:,,....,,:::::,.            
+      ..,::::::,,.. 
+
+
+pyenv 
+
+to change python version locally
+pyenv local 3.8.1 
+
+to update to lsb 
+git pull 
+in root  and plugins/pyenv-pip-migrate
+
+
+when you update system python (never) or install a package that gives binararies
+pyenv rehash
+
+pyenv-migrate
+pyenv local system 
+i modified the sh script 
+pyenv migrate system 3.8.1 
