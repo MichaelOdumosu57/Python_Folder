@@ -339,7 +339,7 @@ text = "# This is not a comment because it's inside quotes."
 1.6
 
 
->>> 17 // 3  # floor division discards the fractional part
+>>> 17 // 3  # floor division discards the fractional part 
 5
 
 In interactive mode, the last printed expression is assigned to the variable _.
@@ -402,8 +402,9 @@ Usage: thingy [OPTIONS]
 
 use + and * w/ strings
 >>> # 3 times 'un', followed by 'ium'
->>> 3 * 'un' + 'ium'
+>>> 3 * 'un' 'ium'
 'unununium'
+a = 3 * 'un' 'ium'
 
 
 also to concatenate strings 
@@ -428,7 +429,7 @@ substring features
 >>> word[-2:]  # characters from the second-last (included) to the end
 'on'
 
-out of range slices handled gracefully 
+out of range slices handled gracefully not all of them thoguh
 >>> word[4:42]
 'on'
 >>> word[42:]
@@ -1128,7 +1129,7 @@ matrix = [
 ... ]
 [[row[i] for row in matrix] for i in range(4)]
 
-equals 
+equals 77
 single list comprehension
 transposed = []
 >>> for i in range(4):
