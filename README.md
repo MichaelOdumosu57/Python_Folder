@@ -208,7 +208,13 @@ print(car_dictnary['make'])
 print(car_dictnary['model'])
 print(car_dictnary['year'])
 ```
+## to loop through dictonary
 
+```
+for keys,val in car_dictnary.items():
+    print(keys,val)
+#end of loop
+```
 
 
 
