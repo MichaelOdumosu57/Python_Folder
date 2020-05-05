@@ -1,31 +1,34 @@
 # python HOW TO
 
-
 # ASK NO QUESTION, FOR EACH STEP DO IT THE WAY YOU SEE IT !!
 # DONT ASK WHY, IF YOU DO IT THE WAY YOU SEE IT YOU WILL ANSWER YOUR OWN QUESION
 # THE ONLY WAY TO LEARN IS BY DOING :)
+# LINK https://github.com/MichaelOdumosu57/Python_Folder/blob/master/README.md
 
 
 
 
 ## to write a function
-
+> remeber the return statement
 ```python
 def my_function(a,b,c,d,e,f):
     print(a + f)
     print(b+c)
     print(d+e)
+    return 'put me in a variable'
 # function ends here
 ```
 
-## to call  a function
+### to call  a function
 if the function have 6 parameters you give it 6 arguments
 if the function have 7 parameters you give it 7 arguments
 if the function have 12 parameters you give it 12 arguments
 ```python
 my_list = [1,2,3,4,5,6]
-my_function( *my_list)
+function_answer = my_function( *my_list)
 ```
+
+
 
 ## to make a variable
 >  no quotes ,no #, no spaces
@@ -144,6 +147,8 @@ python38 learn.py user_has_to_say
 
 
 python38 store.py soap shampoo toliet_paper tissue
+
+python38 store.py mimi pizza bathtub sink 
 
 ```
 
@@ -280,9 +285,12 @@ ADDR = (HOST,PORT)
 client_msg  = "My message for the server"  
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
+    #connect to  a socket
     s.connect(ADDR)    
-    client_msg = message + "\n"
-    client_msg = message.encode()
+    ################################
+
+    client_msg = client_msg + "\n"
+    client_msg = client_msg.encode()
     s.send(client_msg)
     server_msg = s.recv(1024)
     server_msg =server_msg.decode()
