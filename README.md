@@ -15,7 +15,7 @@ def my_function(a,b,c,d,e,f):
     print(a + f)
     print(b+c)
     print(d+e)
-    return 'put me in a variable'
+    return 'what you need to finsih'
 # function ends here
 ```
 
@@ -26,6 +26,7 @@ if the function have 12 parameters you give it 12 arguments
 ```python
 my_list = [1,2,3,4,5,6]
 function_answer = my_function( *my_list)
+print(function_answer)
 ```
 
 
