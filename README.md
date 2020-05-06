@@ -87,6 +87,8 @@ answer = "my boss name is vaquero, my boss is getting a raise"
 "watch your twos"
 ```
 
+
+
 ### byte strings
 they are used for encryption 
 encoding, decoding, hashing, ssh lock key lock key
@@ -129,8 +131,6 @@ your_string = 'this is your password'
 your_string.encode()
 b'this is your password'
 ```
-
-
 
 
 
@@ -299,6 +299,130 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # print(msg)
 ```
 
-    
-    
+## request and response
+```python
+import requests 
+
+url = 'http://blackjack.runcode.ninja'
+
+modify the url to get different pages or different data from the server 
+url = 'http://blackjack.runcode.ninja/bj.php'
+url = 'http://blackjack.runcode.ninja/aboutPage'
+url = 'http://blackjack.runcode.ninja/adminPage'
+
+
+website = requests.get(url)
+print(website)
+"""
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VideoOfWorks</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+"""
+
+data_for_website = {
+    'choice':'spades',
+    'draws':[1,2,3,4],
+    'Name':'Harper',
+    'Age':27,
+    'email':'harperjones@yahoo.com'
+}
+info = requests.post(url, data=data_for_website)
+"""
+ {
+    'update':true,
+    'winner':'false',
+    'message': "try-again: says Server",
+    'password':" jkewqkqwqrkqwr3241=="
+}
+"""
+```
+
+
+## request and response
+> you always get something different from the server
+```python
+import requests 
+
+url = 'http://blackjack.runcode.ninja'
+
+modify the url to get different pages 
+or different data from the server 
+url = 'http://blackjack.runcode.ninja/bj.php'
+url = 'http://blackjack.runcode.ninja/aboutPage'
+url = 'http://blackjack.runcode.ninja/adminPage'
+
+
+website = requests.get(url)
+print(website)
+"""
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VideoOfWorks</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+"""
+
+data_for_website = {
+    'choice':'spades',
+    'draws':[1,2,3,4],
+    'Name':'Harper',
+    'Age':27,
+    'email':'harperjones@yahoo.com'
+}
+info = requests.post(url, data=data_for_website)
+"""
+ {
+    'update':true,
+    'winner':'false',
+    'message': "try-again: says Server",
+    'password':" jkewqkqwqrkqwr3241=="
+}
+"""
+```
+
+### requests and response Session
+> when you want to steal someones session when they login to their bank acct
+```python
+import requests 
+
+url = "http://tdbank.com"
+sess = requests.Session()
+stolen_rich_person_session = sess.get(url)
+
+
+while money != '$10000000 USD':
+    transfer = {
+        'add':'yes',
+        'from':'rich man acct #',
+        'to':'your account #',
+        'type':'external',
+        'amnt':'$600',
+        'duration':'30 days',
+        'frequency':'6 hrs'
+    }
+    transfer_money = sess.post(url,data = transfer)
+"""
+money transfer to [YOUR NAME HERE] acct
+"""  
+
+sess.close()
+```    
     
