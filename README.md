@@ -348,55 +348,7 @@ info = requests.post(url, data=data_for_website)
 ```
 
 
-## request and response
-> you always get something different from the server
-```python
-import requests 
 
-url = 'http://blackjack.runcode.ninja'
-
-modify the url to get different pages 
-or different data from the server 
-url = 'http://blackjack.runcode.ninja/bj.php'
-url = 'http://blackjack.runcode.ninja/aboutPage'
-url = 'http://blackjack.runcode.ninja/adminPage'
-
-
-website = requests.get(url)
-print(website)
-"""
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>VideoOfWorks</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
-</html>
-"""
-
-data_for_website = {
-    'choice':'spades',
-    'draws':[1,2,3,4],
-    'Name':'Harper',
-    'Age':27,
-    'email':'harperjones@yahoo.com'
-}
-info = requests.post(url, data=data_for_website)
-"""
- {
-    'update':true,
-    'winner':'false',
-    'message': "try-again: says Server",
-    'password':" jkewqkqwqrkqwr3241=="
-}
-"""
-```
 
 ### requests and response Session
 > when you want to steal someones session when they login to their bank acct
@@ -406,6 +358,7 @@ import requests
 url = "http://tdbank.com"
 sess = requests.Session()
 stolen_rich_person_session = sess.get(url)
+money = '$0 USD'
 
 
 while money != '$10000000 USD':
@@ -421,6 +374,7 @@ while money != '$10000000 USD':
     transfer_money = sess.post(url,data = transfer)
 """
 money transfer to [YOUR NAME HERE] acct
+SUCCESS!!
 """  
 
 sess.close()
