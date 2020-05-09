@@ -239,6 +239,29 @@ while my_list[counter] != "hello":
 #end of while loop
 ```
 
+
+### to read to a file in python 
+* make sure target file is in the same folder as the host program
+```python
+with open('samplefile.txt','r') as f:
+    text = f.read()
+    text_list = text.split("\n")
+
+    #or 
+    for line in f:
+        print(line, end='')    
+#end of functiion
+```
+
+### to write to a file in python 
+* make sure target file is in the same folder as the host program
+```python
+with open('samplefile.txt','w') as f:
+    f.write('This is a test\n')
+#end of functiion
+```
+
+
 ## to make a dictionary
 key - the left side only string,number,
 value, - the right side anything go there
@@ -373,6 +396,7 @@ while money != '$10000000 USD':
     }
     transfer_money = sess.post(url,data = transfer)
 """
+server said:
 money transfer to [YOUR NAME HERE] acct
 SUCCESS!!
 """  
